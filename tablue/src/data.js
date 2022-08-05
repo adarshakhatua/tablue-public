@@ -27,22 +27,22 @@ export const liveSaved = [
     },
     {
         id: 6,
-        count: 7500,
+        count: 7700,
         year: 2019,
     },
     {
         id: 7,
-        count: 8500,
+        count: 8800,
         year: 2020,
     },
     {
         id: 8,
-        count: 10000,
+        count: 10200,
         year: 2021,
     },
     {
         id: 9,
-        count: 10500,
+        count: 10875,
         year: 2022,
     }
 
