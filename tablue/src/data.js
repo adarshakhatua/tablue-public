@@ -65,3 +65,74 @@ export const averageAdoptionTime = [
         days: 103,
     }
 ]
+
+export const Breeds = [
+    {
+        name: "Labrador",
+        popularity:1422,
+    },
+    {
+        name: "Pit",
+        popularity:832,
+    },
+    {
+        name: "Hound",
+        popularity:400,
+    },
+    {
+        name: "Shepherd",
+        popularity:376,
+    },
+    {
+        name: "Terrier",
+        popularity:306,
+    },
+    {
+        name: "American",
+        popularity:157,
+    },
+    {
+        name: "Catahoula",
+        popularity:155,
+    },
+    {
+        name: "Hounds",
+        popularity:150,
+    },
+    {
+        name: "Australian",
+        popularity:126,
+    },
+
+    {
+        name: "Mountain",
+        popularity:108,
+    }
+]
+
+export const Adoptibility = [
+    {
+        type: "Gets Along with Dogs",
+        Does: 87,
+        DoesNot:1,
+        NotSure: 12,
+    },
+    {
+        type: "Gets Along with Cats",
+        Does: 29,
+        DoesNot: 7,
+        NotSure: 64,
+    },
+    {
+        type: "Gets Along with Kids",
+        Does: 58,
+        DoesNot: 3,
+        NotSure: 39,
+    },
+    {
+        type: "Are Housebroken",
+        Does: 38,
+        DoesNot: 6,
+        NotSure: 56,
+    },
+]

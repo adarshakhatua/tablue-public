@@ -1,54 +1,50 @@
-import "../style/chart.second.css";
+import "../style/chart.third.css";
 import { chart as ChartJS } from "chart.js/auto";
 import ChartDataLabels from 'chartjs-plugin-datalabels';
-import { Bar, } from "react-chartjs-2";
-import { averageAdoptionTime } from "../data";
+import { Bar } from "react-chartjs-2";
+import { Breeds } from "../data";
 
-export const BarChart = () => {
-
-    return (<div id="barChart" > <Bar
+export const BarChart2 = () => {
+    return (<div id="barChart2" > <Bar
         data={{
-            labels: averageAdoptionTime.map((item) => item.type),
+            labels: Breeds.map((item) => item.name),
             datasets: [
                 {
                     label: "average adoption time",
-                    data: averageAdoptionTime.map(item => item.days),
+                    data: Breeds.map(item => item.popularity),
                     datalabels: {
-                        anchor:"end",
+                        anchor: "end",
                         align: "right",
-                        offset: 0, 
+                        offset: 0,
                     },
                     backgroundColor: "#97e2e7",
                     hoverBorderColor: "black",
-                    hoverBorderWidth:1,
+                    hoverBorderWidth: 1,
                     barThickness: 10,
-                }, 
+                },
             ],
         }}
         options={{
             indexAxis: 'y',
-            aspectRatio:20/6,
+            aspectRatio: 20 / 6,
             plugins: {
                 datalabels: {
                     formatter: function (value, context) {
                         // console.log(context);
-                        if (context.active) {
-                            
-                        }
-                        return value+" days"
+                        return value
                     }
                 },
                 legend: {
                     display: null,
                 },
                 tooltip: {
-                    enabled:false,
+                    enabled: false,
                 }
             },
             scales: {
                 x: {
                     grid: {
-                        display: false, 
+                        display: false,
                     },
                     display: false,
                 },
@@ -56,15 +52,15 @@ export const BarChart = () => {
                     grid: {
                         display: null,
                         borderWidth: 0,
-                    }, 
+                    },
                     ticks: {
-                        callback: function (value, index,ticks) {
-                            return averageAdoptionTime[index].age + " " + averageAdoptionTime[index].type;
+                        callback: function (value, index, ticks) {
+                            return Breeds[index].name;
                         }
                     }
                 }
             }
         }}
         plugins={[ChartDataLabels]}
-        /> </div>)
+    /> </div>)
 }
