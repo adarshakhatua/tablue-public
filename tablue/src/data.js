@@ -47,3 +47,21 @@ export const liveSaved = [
     }
 
 ]
+
+export const averageAdoptionTime = [
+    {
+        type: "Puppy",
+        age:"0-1",
+        days:30,
+    },
+    {
+        type: "Adult",
+        age:"2-6",
+        days: 85,
+    },
+    {
+        type: "Senior",
+        age:"7+",
+        days: 103,
+    }
+]

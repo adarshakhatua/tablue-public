@@ -4,7 +4,7 @@ import { Chart as ChartJS, Ticks } from "chart.js/auto";
 import { liveSaved} from "../data";
 
 
-export const FirstChart = () => {
+export const LineChart = () => {
 
     return (
         <div id="firstChart">
@@ -99,7 +99,7 @@ export const FirstChart = () => {
                             intersect:false,
                         },
                         maintainAspectRatio:false,
-                        plugins: {
+                        plugins: {  
                             legend: {
                                 display: null
                             },

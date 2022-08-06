@@ -1,5 +1,6 @@
 import "./style/main.page.css";
-import { FirstChart } from "./components/chart.first";
+import { LineChart } from "./components/chart.first";
+import { BarChart } from "./components/chart.second";
 
 
 
@@ -9,7 +10,8 @@ export const MainPage = () => {
 
     return (
         <div id="mainPage">
-            <FirstChart  />
+            <LineChart />
+            <BarChart/>
         </div>
     )
 }
