@@ -16,9 +16,10 @@ export const BarChart2 = () => {
                         anchor: "end",
                         align: "right",
                         offset: 0,
+                        color: "black",
                     },
                     backgroundColor: "#97e2e7",
-                    barThickness: 12,
+                    barThickness: 10,
                     hoverBorderColor: "black",
                     hoverBorderWidth: 1,
                     borderSkipped: false,
@@ -27,7 +28,7 @@ export const BarChart2 = () => {
         }}
         options={{
             indexAxis: 'y',
-            aspectRatio: 20 / 6,
+            aspectRatio: false,
             plugins: {
                 datalabels: {
                     formatter: function (value, context) {
@@ -57,6 +58,10 @@ export const BarChart2 = () => {
                     ticks: {
                         callback: function (value, index, ticks) {
                             return Breeds[index].name;
+                        },
+                        color: "rgb(0 0 0)",
+                        font: {
+                            size: 12
                         }
                     }
                 }

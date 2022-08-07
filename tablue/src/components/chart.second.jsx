@@ -6,7 +6,8 @@ import { averageAdoptionTime } from "../data";
 
 export const BarChart = () => {
 
-    return (<div id="barChart" > <Bar
+    return (<div id="barChart" >
+        <Bar
         data={{
             labels: averageAdoptionTime.map((item) => item.type),
             datasets: [
@@ -32,12 +33,11 @@ export const BarChart = () => {
             plugins: {
                 datalabels: {
                     formatter: function (value, context) {
-                        // console.log(context);
-                        if (context.active) {
-                            
+                        if (context.active) {  
                         }
                         return value+" days"
-                    }
+                    },
+                    color: "black",
                 },
                 legend: {
                     display: null,
@@ -61,6 +61,10 @@ export const BarChart = () => {
                     ticks: {
                         callback: function (value, index,ticks) {
                             return averageAdoptionTime[index].age + " " + averageAdoptionTime[index].type;
+                        },
+                        color: "rgb(0 0 0)",
+                        font: {
+                            size: 12
                         }
                     }
                 }

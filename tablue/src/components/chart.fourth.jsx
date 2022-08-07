@@ -29,13 +29,14 @@ export const StackChart = () => {
                             },
                             display: function name(params) {
                                 let data = params.dataset.data[params.dataIndex]
-                                if (data >= 5) {
+                                if (data >= 20) {
                                     return true
                                 }
                                 else {
                                     return false
                                 }
                             },
+                            color: "black",
                         },
                         backgroundColor: "#97e2e7",
                         barThickness: 15,
@@ -52,13 +53,15 @@ export const StackChart = () => {
                             },
                             display: function name(params) {
                                 let data = params.dataset.data[params.dataIndex]
-                                if (data >= 5) {
+                                if (data >= 20) {
                                     return true
                                 }
                                 else {
                                     return false
                                 }
-                            }
+                            },
+                            color: "black",
+                            
                         },
                         backgroundColor: "rgb(92 96 104)",
                         barThickness: 15,
@@ -75,13 +78,14 @@ export const StackChart = () => {
                             },
                             display: function name(params) {
                                 let data = params.dataset.data[params.dataIndex]
-                                if (data >= 5) {
+                                if (data >= 20) {
                                     return true
                                 }
                                 else {
                                     return false
                                 }
-                            }
+                            },
+                            color: "black",
                         },
                         backgroundColor: "rgb(211 211 211)",
                         barThickness: 15,
@@ -104,12 +108,24 @@ export const StackChart = () => {
                             borderWidth: 0,
                         },
                         display: false,
+                        ticks: {
+                            color: "rgb(0 0 0)",
+                            font: {
+                                size: 12
+                            }
+                        }
                     },
                     y: {
                         stacked: true,
                         grid: {
                             display: false,
                             borderWidth:0,
+                        },
+                        ticks: {
+                            color: "rgb(0 0 0)",
+                            font: {
+                                size: 12
+                            }
                         }
                     }
                 },
@@ -119,7 +135,7 @@ export const StackChart = () => {
                         labels: {
                             boxHeight: 12,
                             boxWidth:12,
-                            
+                           color : "black",
                         }
                     },
                     tooltip: {

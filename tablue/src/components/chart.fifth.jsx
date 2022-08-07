@@ -44,9 +44,12 @@ export const LineChart2 = () => {
                                 },
                                 offset: true,
                                 ticks: {
-                                    color: "rgba(16, 16, 16, 0.75)",
+                                    color: "rgb(0, 0, 0)",
                                     maxRotation: 0,
                                     padding: 0,
+                                    font: {
+                                        size:"12px"
+                                    }
                                 },
 
                             },
@@ -68,11 +71,14 @@ export const LineChart2 = () => {
                                     tickWidth: 0
                                 },
                                 ticks: {
+                                    color: "rgb(0, 0, 0)",
                                     autoSkip: true,
                                     maxTicksLimit: 4,
                                     maxRotation: 0,
                                     align: "center",
-                                   
+                                    font: {
+                                        size: "12px"
+                                    }
                                 },
                                 position: "left",
                             },

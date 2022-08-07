@@ -8,6 +8,7 @@ export const LineChart = () => {
 
     return (
         <div id="firstChart">
+            
             <Line
                 data={{
                     labels: liveSaved.map((res) => res.year),
@@ -45,11 +46,14 @@ export const LineChart = () => {
                                 },
                                 offset: true,
                                 ticks: {
-                                    color: "rgba(16, 16, 16, 0.75)",
                                     autoSkip: true,
                                     maxTicksLimit: 5,
                                     maxRotation: 0,
                                     padding: 0,
+                                    color: "rgb(0 0 0)",
+                                    font: {
+                                        size:12
+                                    }
                                 },
                                 
                             },
@@ -80,6 +84,10 @@ export const LineChart = () => {
                                             value = Math.floor(value / 1000);
                                         }
                                         return value+"K"
+                                    },
+                                    color: "rgb(0 0 0)",
+                                    font: {
+                                        size: 12
                                     }
                                 },
                                 position: "left",

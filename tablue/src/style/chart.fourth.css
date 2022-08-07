@@ -1,8 +1,8 @@
 #stackChart{
-    border: 1px solid black;
-    height: 200px;
-    width: 500px;
-    margin: 100px;
+    /* border: 1px solid black; */
+    height: 140px;
+    width: 300px;
+    /* margin: 350px 0px 0px 90px; */
 }
 #stackChart canvas{
     position: absolute;
