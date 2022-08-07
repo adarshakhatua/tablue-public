@@ -1,5 +1,6 @@
 import "./style/main.page.css";
 import { LineChart } from "./components/chart.first";
+import { LineChart2 } from "./components/chart.fifth";
 import { BarChart } from "./components/chart.second";
 import { BarChart2 } from "./components/chart.third";
 import { StackChart } from "./components/chart.fourth";
@@ -14,7 +15,8 @@ export const MainPage = () => {
             <LineChart />
             <BarChart />
             <BarChart2 />
-            <StackChart/>
+            <StackChart />
+            <LineChart2/>
         </div>
     )
 }

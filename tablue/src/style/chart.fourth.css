@@ -4,3 +4,6 @@
     width: 500px;
     margin: 100px;
 }
+#stackChart canvas{
+    position: absolute;
+}

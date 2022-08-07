@@ -1,10 +1,19 @@
 import "../style/chart.fourth.css";
 import { Bar } from "react-chartjs-2";
-import { Chart as ChartJS } from 'chart.js';
+import { Chart as ChartJS,Tooltip } from 'chart.js';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
 import { Adoptibility } from "../data";
 
 export const StackChart = () => {
+
+    Tooltip.positioners.myCustomPositioner = function (elements, eventPosition) {
+        const tooltip = this;
+        return {
+            x: eventPosition.x,
+            y: eventPosition.y+50,
+        };
+    };
+
     return <div id="stackChart">
         <Bar
             data={{
@@ -29,7 +38,10 @@ export const StackChart = () => {
                             },
                         },
                         backgroundColor: "#97e2e7",
-                        barThickness:15,
+                        barThickness: 15,
+                        hoverBorderColor: "black",
+                        hoverBorderWidth: 1,
+                        borderSkipped: false,
                     },
                     {   
                         label: "Does Not/Are Not",
@@ -50,6 +62,9 @@ export const StackChart = () => {
                         },
                         backgroundColor: "rgb(92 96 104)",
                         barThickness: 15,
+                        hoverBorderColor: "black",
+                        hoverBorderWidth: 1,
+                        borderSkipped: false,
                     },
                     {   
                         label: "Not Sure",
@@ -70,6 +85,9 @@ export const StackChart = () => {
                         },
                         backgroundColor: "rgb(211 211 211)",
                         barThickness: 15,
+                        hoverBorderColor: "black",
+                        hoverBorderWidth: 1,
+                        borderSkipped:false,
                     }
                 ],
             }}
@@ -105,7 +123,9 @@ export const StackChart = () => {
                         }
                     },
                     tooltip: {
+                       
                         callbacks: {
+                           
                             title: function (tooltipItem) {
                                 
                                 if (tooltipItem[0].dataset.label === "Does/Are") {
@@ -129,7 +149,12 @@ export const StackChart = () => {
                         titleColor: "black",
                         boxHeight: null,
                         boxWidth: null,
-                        xAlign:"right",
+                        xAlign: "right",
+                        padding: 15,
+                        borderColor: "#484848",
+                        borderWidth: 0.5,
+                        position: "myCustomPositioner",
+                        
                     }
                 },
             }} 

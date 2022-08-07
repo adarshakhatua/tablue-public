@@ -136,3 +136,30 @@ export const Adoptibility = [
         NotSure: 56,
     },
 ]
+
+export const averageAdoptionTimeOverTime = [
+    {
+        year: 2017,
+        time:35,
+    },
+    {
+        year: 2018,
+        time:50,
+    },
+    {
+        year: 2019,
+        time:55,
+    },
+    {
+        year: 2020,
+        time:37,
+    },
+    {
+        year: 2021,
+        time:39,
+    },
+    {
+        year: 2022,
+        time:52,
+    },
+]

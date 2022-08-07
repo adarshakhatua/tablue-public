@@ -18,9 +18,10 @@ export const BarChart2 = () => {
                         offset: 0,
                     },
                     backgroundColor: "#97e2e7",
+                    barThickness: 12,
                     hoverBorderColor: "black",
                     hoverBorderWidth: 1,
-                    barThickness: 10,
+                    borderSkipped: false,
                 },
             ],
         }}
