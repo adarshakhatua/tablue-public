@@ -16,4 +16,4 @@
 
 I have used **React** to build the front-end. For all the graphs I have used **chart.js** and **react-chartjs-2** ( _React components for Chart.js_ )  to build those graphs.
 
-[click here to visit the site](https://app.netlify.com/sites/pubictableau/overview)
+[click here to visit the site](https://pubictableau.netlify.app/)
